@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <h2>Tenants</h2>
+  
+  <button class="btn btn-dark" routerLink="/AddTenant">Add Tenant</button>
+  
+  <div *ngFor="let tenant of tenants" class="card mb-3 bg-light">
+    <div class="card-body">
+      <h5 class="card-title">{{ tenant.tname }}</h5>
+      <p class="card-text">
+        Contact Info: <br>
+         {{ tenant.phone }} <br>
+         {{tenant.email}}<br>
+        Address: {{ tenant.taddress }} <br>
+       
+      <!-- Button to fetch and toggle tenant's leases -->
+      <button class="btn btn-secondary" (click)="toggleLeases(tenant)">
+        {{ tenant.showLeases ? 'Hide' : 'Find Tenant\'s Leases' }}
+      </button>
+
+      <!-- Display leases if they are fetched and showLeases is true -->
+      <div *ngIf="tenant.showLeases">
+        <h5 class="mt-3">Leases:</h5>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let lease of tenant.leases">
+            Lease ID: {{ lease.lid }} <br>
+            Start Date: {{ lease.startDate }} <br>
+            End Date: {{ lease.endDate }} <br>
+            Rent Amount: {{ lease.rent }} <br>
+            Security Amount: {{ lease.security }}
+          </li>
+        </ul>
+      </div>
+    
+        
+      <!-- Edit and Delete Buttons -->
+      <button type="button" class="btn btn-secondary" [routerLink]="['/EditTenant', tenant.tid]">Edit</button>  &nbsp;&nbsp;&nbsp;
+      <button type="button" (click)="deleteMyTenant(tenant.tid)" class="btn btn-dark">Delete</button>
+    </div>
+  </div>
+</div>
+
+    <!-- <div class="d-flex justify-content-between mb-3">
+      <h3>Tenants</h3>
+      <button class="btn btn-primary" routerLink="/tenants/add">Add Tenant</button>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let tenant of tenants">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h5>{{tenant.tname}}</h5>
+            <p>{{tenant.phone}}</p>
+            <p>{{tenant.taddress }}</p>
+          </div>
+
+          <button type="button" class="btn btn-warning" [routerLink]="['/Edit', tenant.tid]">Edit</button>  &nbsp;&nbsp;&nbsp;
+          <button type="button" (click)="deleteTenant(tenant.tid)" class="btn btn-danger">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+   --> 

@@ -1,0 +1,61 @@
+<!--     NAVBAR     -->
+     <!--     NAVBAR     -->
+<div>
+    <nav class="navbar navbar-expand-sm" style="background-color: #343a40; color: #ffffff;">
+        <!-- Navbar Brand Name -->
+        <a class="navbar-brand" href="#" style="color: #ffffff; padding-left: 20px; font-size: 1.5rem;">
+            PropManage
+        </a>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- collapse will prevent overlapping-->
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="nav nav-tabs" style="border-bottom: none;">
+                
+                <li routerLinkActive="active">
+                    <a routerLink="Login" style="color: #ffffff; padding-left: 100px;">Login</a>
+                </li>
+             
+                <li routerLinkActive="active">   
+                    <a routerLink="Properties" style="color: #ffffff; padding-left: 100px;">Property Listing</a>
+                </li>
+             
+                <li routerLinkActive="active">
+                    <a routerLink="Tenants" style="color: #ffffff; padding-left: 100px;">Tenants</a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="Leases" style="color: #ffffff; padding-left: 100px;">Leases</a>
+                </li>
+            </ul>                    
+        </div>     
+        
+        <!-- Log Out Button -->
+        <button type="button" class="btn btn-dark ml-4">Log Out</button>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- <div>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+       <a class="navbar-brand" href="http://revature.com">
+           <img src="wipro.jfif"
+           style="position:relative;left:150;top:0; height:50px"
+            alt="logo"></a>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+               <ul class="navbar-nav mr-auto"> </ul>
+               <ul class="nav nav-tabs">
+                   <li routerLinkActive="active">
+                       <a routerLink="myLogin" style="padding-left:100px">Login</a> </li>
+                   <li routerLinkActive="active">   
+                       <a routerLink="Property" style="padding-left:100px">Property Listing</a> </li>
+                   <li routerLinkActive="active">
+                    <a routerLink="Tenants" style="padding-left:100px">Tenants </a>
+                </li>
+               </ul>                    
+              </div>     
+             <button type="button" class="btn btn-dark ml-4">Log Out</button>
+    
+   </nav></div>
+   <router-outlet></router-outlet> -->

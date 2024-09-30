@@ -1,0 +1,33 @@
+{
+  
+  "properties": [
+      {
+        "pid": "100",
+        "paddress": "Mumbai",
+        "ptype": "Resedential"
+      },
+      {
+        "pid": "100",
+        "paddress": "Delhi",
+        "ptype": "Resedential"
+      }
+   
+    ],
+    "tenants": [
+      {
+        "tid": "110",
+        "tname": "abc",
+        "email":"abc@gmail.com",
+        "taddress": "Mumbai",
+        "phone":12345
+      },
+      {
+        "tid": "104",
+        "tname":"xyz",
+        "email":"xyz@gmail.com",
+        "taddress": "Mumbai",
+        "phone":12345
+      }
+   
+    ]
+}

@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <h2>Property Listing</h2>
+    
+    <button class="btn btn-dark" routerLink="/AddProperty">Create Property</button>
+    
+    <div *ngFor="let property of properties" class="card mb-3 bg-light">
+      <div class="card-body">
+        <!-- <h5 class="card-title">{{ property.pname }}</h5> -->
+        <p class="card-text">
+          Property Details: <br>
+           Address: {{ property.paddress }} <br>
+           Type: {{property.ptype}}<br>
+        </p>
+        
+        <button type="button" class="btn btn-secondary" [routerLink]="['/EditProperty', property.pid]">Edit</button>  &nbsp;&nbsp;&nbsp;
+        <button type="button" (click)="deleteMyProperty(property.pid)" class="btn btn-dark">Delete</button>
+      </div>
+    </div>
+  </div>
