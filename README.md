@@ -17,12 +17,12 @@ Unit Testing: Unit tests are performed on the service layer using JUnit and Mock
 
 
 ## Technologies Used
-###Frontend: 
+##Frontend: 
 Angular
 TypeScript
 HTML/CSS for responsive UI
 
-###Backend: 
+##Backend: 
 Java (Spring Boot)
 Microservices Architecture
 Feign Client for inter-service communication
